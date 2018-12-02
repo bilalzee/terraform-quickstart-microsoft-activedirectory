@@ -1,4 +1,7 @@
-# quickstart-microsoft-activedirectory
+# terraform-quickstart-microsoft-activedirectory
+
+This is a fork of the AWS quickstart below to launch self managed Active Directory Domain Services on AWS.  The key purpose of the fork is to launch the template from Terraform as a foundation that has no cloudformation parameter limits when combined with other templates.
+
 ## Active Directory Domain Services (AD DS) on the AWS Cloud
 
 
