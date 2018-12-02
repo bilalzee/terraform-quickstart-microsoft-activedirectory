@@ -1,23 +1,12 @@
-provider "aws" {
-  #  if you haven't installed and configured the aws cli, you will need to provide your aws access key and secret key.
-  #  access_key = "${var.aws_access_key}"
-  #  secret_key = "${var.aws_secret_key}"
-  region = "${var.region}"
-}
+module "ad-master-1" {
+  source = "./modules/ad-master-1"
 
-resource "aws_cloudformation_stack" "VPCStack" {
-  name = "VPCStack"
+  ### Important - need to work on hiding these variables.  they should not exist in the git repo.  
+  ### You will need to create your own private-variables.tf file in this folder to define these variables.
 
-  parameters = {
-    AvailabilityZones   = "${var.AvailabilityZones}"
-    KeyPairName         = "${var.KeyPairName}"
-    NumberOfAZs         = "${var.NumberOfAZs}"
-    PrivateSubnet1ACIDR = "${var.PrivateSubnet1CIDR}"
-    PrivateSubnet2ACIDR = "${var.PrivateSubnet2CIDR}"
-    PublicSubnet1CIDR   = "${var.PublicSubnet1CIDR}"
-    PublicSubnet2CIDR   = "${var.PublicSubnet2CIDR}"
-    VPCCIDR             = "${var.VPCCIDR}"
-  }
-
-  template_url = "https://github.com/firehawkvfx/terraform-quickstart-microsoft-activedirectory/blob/master/templates/ad-master-1.template"
+  KeyPairName         = "${var.KeyPairName}"
+  RDGWCIDR            = "${var.RDGWCIDR}"
+  RestoreModePassword = "${var.RestoreModePassword}"
+  DomainAdminUser     = "${var.DomainAdminUser}"
+  DomainAdminPassword = "${var.DomainAdminPassword}"
 }

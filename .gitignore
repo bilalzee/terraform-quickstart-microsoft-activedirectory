@@ -1,1 +1,6 @@
 .DS_Store
+terraform/private-variables.tf
+*lock.json
+*terraform-provider-aws_v1.50.0_x4
+terraform/.terraform/*
+*.tfstate*
