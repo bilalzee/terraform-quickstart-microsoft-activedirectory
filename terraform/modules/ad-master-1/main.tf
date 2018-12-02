@@ -42,6 +42,7 @@ variable "DomainAdminPassword" {
 
 resource "aws_cloudformation_stack" "ADStack" {
   name               = "ADStack"
+  capabilities       = ["CAPABILITY_IAM"]
   timeout_in_minutes = "60"
 
   parameters = {
