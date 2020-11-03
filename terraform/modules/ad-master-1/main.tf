@@ -72,7 +72,7 @@ resource "aws_cloudformation_stack" "ADStack" {
     # Microsoft Active Directory Configuration
     DomainDNSName       = "${var.DomainDNSName}"
     DomainNetBIOSName   = "${var.DomainNetBIOSName}"
-    RestoreModePassword = "${var.RestoreModePassword}"
+    // RestoreModePassword = "${var.RestoreModePassword}"
     DomainAdminUser     = "${var.DomainAdminUser}"
     DomainAdminPassword = "${var.DomainAdminPassword}"
 
