@@ -6,7 +6,7 @@ module "ad-master-1" {
 
   KeyPairName         = "${var.KeyPairName}"
   RDGWCIDR            = "${var.RDGWCIDR}"
-  RestoreModePassword = "${var.RestoreModePassword}"
+  // RestoreModePassword = "${var.RestoreModePassword}"
   DomainAdminUser     = "${var.DomainAdminUser}"
   DomainAdminPassword = "${var.DomainAdminPassword}"
 }

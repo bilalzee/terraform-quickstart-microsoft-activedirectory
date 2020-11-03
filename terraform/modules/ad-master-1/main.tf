@@ -26,10 +26,11 @@ variable "RDGWCIDR" {
 }
 
 ### set this password and ensure it is unique, it is required to restore the domain.
-variable "RestoreModePassword" {
+/*
+  variable "RestoreModePassword" {
   default = "thisPasswordMustBeChanged"
 }
-
+*/
 ### Set this user name to a unique name - this is the stack admin user name to login to the remote gateway and domain controllers.
 variable "DomainAdminUser" {
   default = "StackAdmin"
@@ -71,7 +72,7 @@ resource "aws_cloudformation_stack" "ADStack" {
     # Microsoft Active Directory Configuration
     DomainDNSName       = "${var.DomainDNSName}"
     DomainNetBIOSName   = "${var.DomainNetBIOSName}"
-    RestoreModePassword = "${var.RestoreModePassword}"
+    // RestoreModePassword = "${var.RestoreModePassword}"
     DomainAdminUser     = "${var.DomainAdminUser}"
     DomainAdminPassword = "${var.DomainAdminPassword}"
 
