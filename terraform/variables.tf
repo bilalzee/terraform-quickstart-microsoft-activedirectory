@@ -1,3 +1,8 @@
+variable "AvailabilityZones" {
+}
+variable "DomainDNSName" {
+} 
+
 ### Create your own key pair and insert its name here
 variable "KeyPairName" {
   default = "my_key_pair"
