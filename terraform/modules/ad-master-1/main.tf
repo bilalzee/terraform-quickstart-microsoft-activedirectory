@@ -26,10 +26,11 @@ variable "RDGWCIDR" {
 }
 
 ### set this password and ensure it is unique, it is required to restore the domain.
-variable "RestoreModePassword" {
+/*
+  variable "RestoreModePassword" {
   default = "thisPasswordMustBeChanged"
 }
-
+*/
 ### Set this user name to a unique name - this is the stack admin user name to login to the remote gateway and domain controllers.
 variable "DomainAdminUser" {
   default = "StackAdmin"
