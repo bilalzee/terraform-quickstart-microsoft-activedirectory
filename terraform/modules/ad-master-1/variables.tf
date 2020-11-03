@@ -31,11 +31,11 @@ variable "VPCCIDR" {
 }
 
 variable "ADServer1InstanceType" {
-  default = "t2.large"
+  default = "t2.medium"
 }
 
 variable "ADServer2InstanceType" {
-  default = "t2.large"
+  default = "t2.medium"
 }
 
 variable "ADServer1NetBIOSName" {
@@ -55,7 +55,7 @@ variable "ADServer2PrivateIP" {
 }
 
 variable "RDGWInstanceType" {
-  default = "t2.large"
+  default = "t2.medium"
 }
 
 variable "DomainDNSName" {
